@@ -124,7 +124,6 @@ alias tks="tmux kill-session -t"
 alias tns="tmux new -s"
 alias sau="sudo apt update"
 
-
 addProject() {
   local token="$1"
   local project_json="$2"
@@ -194,7 +193,7 @@ push(){
 }
 alias ta="tmux attach -t"
 alias tls="tmux ls"
-alias ls="eza"
+alias ls="eza --icons"
 alias gs="git status"
 alias grv="git remote -v"
 alias su="sudo update"
