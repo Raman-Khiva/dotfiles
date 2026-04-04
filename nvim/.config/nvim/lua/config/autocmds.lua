@@ -14,3 +14,19 @@ vim.filetype.add({
     [".env.*"] = "sh",
   },
 })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "dockerfile",
+  callback = function()
+    vim.cmd([[
+      inoreabbrev <buffer> from FROM
+      inoreabbrev <buffer> run RUN
+      inoreabbrev <buffer> cmd CMD
+      inoreabbrev <buffer> copy COPY
+      inoreabbrev <buffer> add ADD
+      inoreabbrev <buffer> workdir WORKDIR
+      inoreabbrev <buffer> expose EXPOSE
+      inoreabbrev <buffer> env ENV
+      inoreabbrev <buffer> entrypoint ENTRYPOINT
+    ]])
+  end,
+})
