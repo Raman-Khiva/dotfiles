@@ -131,3 +131,5 @@ if ! shopt -oq posix; then
   fi
 fi
 . "$HOME/.cargo/env"
+
+. "$HOME/.local/bin/env"

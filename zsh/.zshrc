@@ -226,3 +226,5 @@ alias druns="doppler run -- node src/index.js"
 alias venv="source venv/bin/activate"
 alias fastapp="uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
 alias health="http :5000/api/health"
+
+. "$HOME/.local/bin/env"
