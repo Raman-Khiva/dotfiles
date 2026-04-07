@@ -138,6 +138,33 @@ addProject() {
 # file search
 alias fswp="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"
 
+clone() {
+  local owner="Raman-Khiva"
+
+  # parse flag -o
+  while getopts "o:" opt; do
+    case $opt in
+      o) owner="$OPTARG" ;;
+      *) echo "Usage: clone [-o owner] repo-name"; return 1 ;;
+    esac
+  done
+
+  shift $((OPTIND - 1))
+
+  # repo name required
+  if [ -z "$1" ]; then
+    echo "❌ Repo name required"
+    echo "Usage: clone [-o owner] repo-name"
+    return 1
+  fi
+
+  local repo="$1"
+  local url="git@github.com:${owner}/${repo}.git"
+
+  echo "🚀 Cloning $url"
+  git clone "$url"
+}
+
 q() {
   local model="meta-llama/llama-4-scout-17b-16e-instruct"
   local max_tokens=150
@@ -228,3 +255,4 @@ alias fastapp="uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
 alias health="http :5000/api/health"
 
 . "$HOME/.local/bin/env"
+alias pnx=pnpm dlx
