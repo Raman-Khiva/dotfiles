@@ -123,6 +123,18 @@ alias rscl="rs && cls"
 alias tks="tmux kill-session -t"
 alias tns="tmux new -s"
 alias sau="sudo apt update"
+alias nf="neofetch --ascii_distro ARCH"
+
+
+
+#Doppler alias
+
+alias addscrt="doppler secrets set"
+alias syncenv="doppler secrets download --no-file --format env > .env"
+
+
+
+
 
 addProject() {
   local token="$1"
@@ -255,4 +267,4 @@ alias fastapp="uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
 alias health="http :5000/api/health"
 
 . "$HOME/.local/bin/env"
-alias pnx=pnpm dlx
+alias pnx="pnpm dlx"
