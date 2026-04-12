@@ -127,6 +127,18 @@ alias nf="neofetch --ascii_distro ARCH"
 
 
 
+# github cli (gh) alias
+alias mkrepo="gh repo create $1 --public --gitignore Node --clone"
+
+
+
+
+
+# git  
+
+alias cln="git clone"
+
+
 #Doppler alias
 
 alias addscrt="doppler secrets set"

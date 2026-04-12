@@ -7,7 +7,7 @@ return {
     event = "VeryLazy",
     config = function()
       local dockerfile_keywords = {
-        "from", "run", "cmd", "label", "expose", "env", "add", "copy",
+        "from", "run", "cmd", "label","as", "expose", "env", "add", "copy",
         "entrypoint", "volume", "user", "workdir", "arg", "onbuild",
         "stopsignal", "healthcheck", "shell", "maintainer",
       }
