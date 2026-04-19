@@ -145,6 +145,9 @@ alias addscrt="doppler secrets set"
 alias syncenv="doppler secrets download --no-file --format env > .env"
 
 
+#Docker alias 
+alias dps="docker ps"
+alias dimgs="docker images"
 
 
 
