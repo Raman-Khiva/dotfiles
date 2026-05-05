@@ -283,3 +283,4 @@ alias health="http :5000/api/health"
 
 . "$HOME/.local/bin/env"
 alias pnx="pnpm dlx"
+export TERM=xterm-256color
