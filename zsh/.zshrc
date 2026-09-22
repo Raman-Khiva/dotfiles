@@ -186,7 +186,7 @@ clone() {
   fi
 
   local repo="$1"
-  local url="git@github.com:${owner}/${repo}.git"
+  local url="https://github.com/${owner}/${repo}"
 
   echo "🚀 Cloning $url"
   git clone "$url"
@@ -265,7 +265,7 @@ export OLDTOKEN="eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Iml
 
 
 
-export TOKEN="eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18zQWxlOHlrMEFmdVhMWEd5cExUSGIyWFlyTkEiLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vMjAuMjA0LjIxNi4yMjM6MzAwMCIsImV4cCI6MTc3MzE4MTcxNSwiZnZhIjpbMTgsLTFdLCJpYXQiOjE3NzMxODE2NTUsImlzcyI6Imh0dHBzOi8vYW1hemluZy1saW9uZXNzLTMwLmNsZXJrLmFjY291bnRzLmRldiIsIm5iZiI6MTc3MzE4MTY0NSwic2lkIjoic2Vzc18zQWx3ZWNISlJPN2NpWjNzZGZJcG9wbG9GRUQiLCJzdHMiOiJhY3RpdmUiLCJzdWIiOiJ1c2VyXzNBbGtlYmlVZzA3QThUSFdZM0FrTmtrZVV2ZyIsInYiOjJ9.iJyjtIBndVjFMYm-zW4VLT_qllHUxs8svEGX6mt3LpnhpIwi53sFGnTQz3QsUYQ37NUX0HO775TbhuOUp0O8-VjkvIbU53jaZ9KH0CE5vR9UFa49Vao6X_C2jMSthliH6VXxYmpL0-vCxHs6MZiHGXOF-uQhxANUZxh6WkMAupZDGlx-uOt0X1OYiA4J2GWozEu140XnJG1J6I8SYtfJuJ9pL5RTeIQIf1y9YmhKlJzolW84sQGQN3uO5NzRIVsFsMe2QHfUrlluhJKV9kZlCfg4rvuGFqoG1jP4rgUG9F5K8EaP7E6JCA22P4T0nsHuPrIgQ7hbU83r6T3YxZdfQw"
+#export TOKEN="eyJhbGciOiJSUzI1NiIsImNhdCI6ImNsX0I3ZDRQRDExMUFBQSIsImtpZCI6Imluc18zQWxlOHlrMEFmdVhMWEd5cExUSGIyWFlyTkEiLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJodHRwOi8vMjAuMjA0LjIxNi4yMjM6MzAwMCIsImV4cCI6MTc3MzE4MTcxNSwiZnZhIjpbMTgsLTFdLCJpYXQiOjE3NzMxODE2NTUsImlzcyI6Imh0dHBzOi8vYW1hemluZy1saW9uZXNzLTMwLmNsZXJrLmFjY291bnRzLmRldiIsIm5iZiI6MTc3MzE4MTY0NSwic2lkIjoic2Vzc18zQWx3ZWNISlJPN2NpWjNzZGZJcG9wbG9GRUQiLCJzdHMiOiJhY3RpdmUiLCJzdWIiOiJ1c2VyXzNBbGtlYmlVZzA3QThUSFdZM0FrTmtrZVV2ZyIsInYiOjJ9.iJyjtIBndVjFMYm-zW4VLT_qllHUxs8svEGX6mt3LpnhpIwi53sFGnTQz3QsUYQ37NUX0HO775TbhuOUp0O8-VjkvIbU53jaZ9KH0CE5vR9UFa49Vao6X_C2jMSthliH6VXxYmpL0-vCxHs6MZiHGXOF-uQhxANUZxh6WkMAupZDGlx-uOt0X1OYiA4J2GWozEu140XnJG1J6I8SYtfJuJ9pL5RTeIQIf1y9YmhKlJzolW84sQGQN3uO5NzRIVsFsMe2QHfUrlluhJKV9kZlCfg4rvuGFqoG1jP4rgUG9F5K8EaP7E6JCA22P4T0nsHuPrIgQ7hbU83r6T3YxZdfQw"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -281,6 +281,5 @@ alias venv="source venv/bin/activate"
 alias fastapp="uvicorn main:app --host 0.0.0.0 --port 5000 --reload"
 alias health="http :5000/api/health"
 
-. "$HOME/.local/bin/env"
 alias pnx="pnpm dlx"
 export TERM=xterm-256color
